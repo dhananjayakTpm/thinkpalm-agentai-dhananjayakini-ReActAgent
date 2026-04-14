@@ -1,9 +1,13 @@
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 from openai import OpenAI, RateLimitError
 import re
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 # ----------------------------
